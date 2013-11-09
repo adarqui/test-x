@@ -1,0 +1,15 @@
+just a little test.
+
+make
+make install
+redis-cli hmset pam-otp:users <username> <key>
+node test_client.js <key>
+cp /usr/sbin/sshd /usr/sbin/sshd_otp
+cp sshd_config_otp /etc/ssh/
+cp etc_pam.d_sshd_otp /etc/pam.d
+/usr/sbin/sshd_otp -f /etc/ssh/sshd_config
+ssh -l <username>@localhost -p 1338
+
+for passcode, enter what test_client.js is displaying: the 8 digit pin
+then enter your password
+
