@@ -1,5 +1,6 @@
 just a little test.
 
+npm install cron
 make
 make install
 redis-cli hmset pam-otp:users <username> <key>

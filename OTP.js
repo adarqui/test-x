@@ -1,8 +1,5 @@
 var
 	cron = require('cron').CronJob,
-	time = require('time'),
-	ursa = require('ursa'),
-	crc = require('crc'),
 	crypto = require('crypto');
 
 
